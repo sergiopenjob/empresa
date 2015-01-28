@@ -1,0 +1,61 @@
+/* EMPLEADOS SIN OFICINA */
+INSERT INTO empresa.empleados
+(num_emp, dni, nombre, fecha_nac, cargo, contrato)
+VALUES 
+('1', '77777777T', 'Jose', '1990-2-2', 'Director General', '2018-05-1');
+
+INSERT INTO empresa.empleados
+(num_emp, dni, nombre, fecha_nac, cargo, contrato)
+VALUES 
+('2', '22222222B', 'Vicente', '1992-6-2', 'Director', '2016-1-1');
+
+INSERT INTO empresa.empleados
+(num_emp, dni, nombre, fecha_nac, cargo, contrato)
+VALUES 
+('3', '33333333B', 'Julia', '1985-2-2', 'Director', '2018-05-1');
+
+INSERT INTO empresa.empleados
+(num_emp, dni, nombre, fecha_nac, cargo, contrato)
+VALUES 
+('105', '44444444C', 'Javier', '1989-2-2', 'Vendedor', '2018-05-1');
+
+INSERT INTO empresa.empleados
+(num_emp, dni, nombre, fecha_nac, cargo, contrato)
+VALUES 
+('106', '55555555D', 'Pedro', '1972-2-2', 'Vendedor', '2018-05-1');
+
+/* OFICINAS */ 
+INSERT INTO empresa.oficinas
+(cod_ofic, ciudad, region, director, objetivo, ventas)
+VALUES 
+(10, 'Málaga', 'SUR', 2, 90, 81);
+
+INSERT INTO empresa.oficinas
+(cod_ofic, ciudad, region, director, objetivo, ventas)
+VALUES 
+(20, 'Madrid', 'CENTRO', 3, 50.6, 70);
+
+/* ASIGNACION DE JEFES Y OFICINAS A EMPLEADOS */
+UPDATE empresa.empleados SET cod_ofic = 10, jefe = 1 WHERE num_emp = 2;
+UPDATE empresa.empleados SET cod_ofic = 20, jefe = 1 WHERE num_emp = 3;
+UPDATE empresa.empleados SET cod_ofic = 10, jefe = 2 WHERE num_emp = 105;
+UPDATE empresa.empleados SET cod_ofic = 20, jefe = 3 WHERE num_emp = 106;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
